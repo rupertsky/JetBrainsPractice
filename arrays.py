@@ -1,3 +1,4 @@
+import numpy as np
 """To illustrate it, we'll create two lists and two arrays containing the same elements:
 
 list_a = [1, 2, 3, 4]
@@ -65,7 +66,6 @@ isinstance(obj, type)
 
 """
 def analizararray(n):
-    import numpy as np
     """Esta funcion analiza un arreglo de x dimensiones de la forma
         n.shape
         n = np.zeros((n.shape))
@@ -77,4 +77,25 @@ def analizararray(n):
     print(n.ndim)
     print(n.size)
     print(len(n))
+
+arreglo = np.arange(0, 10)
+
+print(arreglo)
+
+arreglo2 = np.linspace(0, 9, 100)
+
+print(arreglo2)
+
+arreglo3 = np.arange(10, 101)
+
+mask = arreglo3 % 3 == 0
+
+print(arreglo3[mask])
+
+arreglo4 = np.zeros((5, 10))
+arreglo4[[1, 3], :] = 1
+arreglo4[:, [2, 7]] = 2
+
+print(arreglo4)
+
 
